@@ -37,6 +37,13 @@ jobs:
         env:
           RUSTFLAGS: "-C link-arg=-s"
 
+      - name: archive rust wasm
+        uses: actions/upload-artifact@v3
+        with:
+          name: snip721-reference-impl.wasm
+          path: |
+            target/wasm32-unknown-unknown/release/snip721-reference-impl.wasm
+
       - name: Run integration tests
         uses: actions-rs/cargo@v1
         with:
