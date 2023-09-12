@@ -37,6 +37,9 @@ jobs:
         env:
           RUSTFLAGS: "-C link-arg=-s"
 
+      - name: recursively list built artifacts
+        run: ls -R target
+
       - name: archive rust wasm
         uses: actions/upload-artifact@v3
         with:
