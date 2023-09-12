@@ -45,7 +45,7 @@ jobs:
         with:
           name: snip721-reference-impl.wasm
           path: |
-            target/wasm32-unknown-unknown/release/deps/snip721-reference-impl.wasm
+            target/wasm32-unknown-unknown/release/deps/snip721_reference_impl.wasm
 
       - name: Run integration tests
         uses: actions-rs/cargo@v1
